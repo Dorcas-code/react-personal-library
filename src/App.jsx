@@ -1,6 +1,8 @@
 
 import {BrowserRouter,  Route, Routes } from "react-router";
 import LibraryPage from "./pages/Library";
+import ItemDetailsPage from "./pages/Library";
+import FavoriteBookPage from "./pages/Favorites";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import Library from "./components/Library";
 import "./App.css";
@@ -14,11 +16,11 @@ function App() {
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
+          <Route path="/ItemDetailsPage" element={<ItemDetailsPage />} />
+            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
        
       </Routes>
   <Library/>
-
-      <Navigation />
       </BrowserRouter>
       </ThemeProvider>
     </>

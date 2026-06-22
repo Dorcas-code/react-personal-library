@@ -5,6 +5,7 @@ export default function Navigation() {
     <nav>
       <li>
         <Link to="/">Home</Link>
+        <Link  to="/FavoriteBookPage"> My Favorite Books</Link>
       </li>
 
      
