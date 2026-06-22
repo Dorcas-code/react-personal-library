@@ -13,7 +13,7 @@ return (
 <form class="mx-4" onSubmit={handleSubmit}>
      <InputGroup  >
         <Form.Control 
-          placeholder="Search book"
+          placeholder="Type to search..."
           aria-label="Search book"
           aria-describedby="basic-addon2"
       
