@@ -8,25 +8,16 @@ export default function LibraryPage() {
   return (
  <>
 
-    <div  style={{
-          display: "flex",
-           justifyContent:"space-between",
-          width: "100%",
-          height: "100vh",
-          background: theme === "light" ? "white" : "black",
-        }}>
-            <h1 style={{
-       
-       color: theme === "light" ? "black" : "white",
-        }}>Home</h1> 
+ 
+          
            
         <Navigation />
-         <ThemeToggleButton /> 
+
         
     
  
 
-    </div>
+   
 </>
   );
 }
