@@ -7,26 +7,19 @@ export default function FavoriteBookPage() {
     const { theme, toggleTheme } = useTheme();
   return (
  <>
+<div  style={{
 
-    <div  style={{
-          display: "flex",
-           justifyContent:"space-between",
-          width: "100%",
-          height: "100vh",
-          background: theme === "light" ? "white" : "black",
-        }}>
-            <h1 style={{
-       
-       color: theme === "light" ? "black" : "white",
-        }}>Favorite Book</h1> 
+                             width:"100%",
+                             height:"100vh",
+                           
+                  backgroundColor: theme === "light" ? "black" : "white"
+                }}>
            
         <Navigation />
-         <ThemeToggleButton /> 
-        
-    
- 
-
-    </div>
+        <h1  style={{
+                color: theme === "light" ? "white" : "black"
+                }}>My Facorite Books</h1>
+         </div>
 </>
   );
 }
