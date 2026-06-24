@@ -16,9 +16,7 @@ export default function Navigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-              <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
-          </Navbar.Text>
+            
             <Nav.Link  variant="primary" href="/" style={{ color: '#000000'}} >Home</Nav.Link>
             <Nav.Link  variant="primary" href="/FavoriteBookPage">My Favorite Books</Nav.Link>
 
