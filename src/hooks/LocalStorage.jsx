@@ -13,28 +13,34 @@ const [favorites, setFavorites] = useState(() => {
     }, [favorites]);
 
      // 3. Handle adding and removing items from the favorites list
-  const toggleFavorite = (id) => {
-    if (favorites.includes(id)) {
+  const toggleFavorite = (bookID) => {
+  
+    if (favorites.includes(bookID)) {
       // Remove item if it's already favorited
-      setFavorites(favorites.filter((favId) => favId !== id));
+       console.log("Include ID! ");
+
+      setFavorites(favorites.filter((favId) => favId !== bookID));
     } else {
       // Add item if it's not favorited
-      setFavorites([...favorites, id]);
+      console.log("added! ");
+      setFavorites([...favorites, bookID]);
     }
   };
+
+  console.log(favorites);
 return (
   
  <button 
-                onClick={() => toggleFavorite({bookID})}
+                onClick={() => toggleFavorite(bookID)}
                 style={{
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
                   fontSize: '20px',
-                  color:  favorites.includes({bookID}) ? 'red' : 'gray'
+                  color:  favorites.includes(bookID) ? 'red' : 'gray'
                 }}
               >
-                { favorites.includes({bookID})  ? '❤️' : '🖤'}
+                { favorites.includes(bookID)  ? '❤️' : '🖤'}
   </button>
  
 );
