@@ -28,13 +28,13 @@ return (
 					key={book.id}
 					className='booklist-container'>
 						<h4>{book.volumeInfo.title}</h4>
-							<LocalStorage bookID={book.id}/><br></br>
+						
 							<p >By: {book.volumeInfo.authors} <Link to={`/book/${book.id}`}>
 
 							<button className='btn-readmore'>
 								Details
 								
-							</button>
+							</button>	<LocalStorage bookID={book.id}/>
 						
 
 					</Link>

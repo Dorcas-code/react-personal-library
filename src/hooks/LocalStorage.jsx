@@ -23,7 +23,9 @@ const [favorites, setFavorites] = useState(() => {
     } else {
       // Add item if it's not favorited
       console.log("added! ");
+      localStorage.clear();
       setFavorites([...favorites, bookID]);
+
     }
   };
 
