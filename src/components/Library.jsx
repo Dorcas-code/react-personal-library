@@ -21,7 +21,7 @@ const {data:books,isLoading,error}=useAPI(`https://www.googleapis.com/books/v1/v
 					key={book.id}
 					className='booklist-container'>
 						<h4>{book.volumeInfo.title}</h4>
-							<p >By: {book.volumeInfo.authors} <Link to={`/books/${book.id}`}>
+							<p >By: {book.volumeInfo.authors} <Link to={`/book/${book.id}`}>
 
 							<button className='btn-readmore'>
 								Details

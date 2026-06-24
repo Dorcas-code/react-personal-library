@@ -1,7 +1,7 @@
 
 import {BrowserRouter,  Route, Routes } from "react-router";
 import LibraryPage from "./pages/Library";
-import ItemDetailsPage from "./pages/Library";
+import  ItemDetailsPage from "./pages/ItemDetails";
 import FavoriteBookPage from "./pages/Favorites";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import { LibraryProvider, useLibrary } from "./context/LibraryContext";
@@ -22,9 +22,9 @@ function App() {
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
-          <Route path="/ItemDetailsPage" element={<ItemDetailsPage />} />
-            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
        
+            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
+                <Route path='/book/:id' element={<ItemDetailsPage />} />
       </Routes>
 
       </BrowserRouter>
