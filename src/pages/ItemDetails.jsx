@@ -15,7 +15,7 @@ export default function ItemDetailsPage() {
             })
             .then((data) => {
                 setBooks(data.items);
-				console.log(data.items);
+				
 			})
     },[])
 	return (

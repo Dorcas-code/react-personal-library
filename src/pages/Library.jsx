@@ -11,6 +11,7 @@ import { Circles } from 'react-loader-spinner';
 export default function LibraryPage() {
     const { theme, toggleTheme } = useTheme();
     const [term, setTerm] = useState('Anything');
+    
     const apiKey = import.meta.env.VITE_MY_API_KEY;
 
 
