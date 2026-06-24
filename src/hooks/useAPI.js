@@ -1,7 +1,7 @@
 import React, {  useState, useEffect } from 'react';
 
 const useAPI = (url) => {
-    const [data, setData] = useState([]);
+   const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -12,7 +12,7 @@ const useAPI = (url) => {
 					return res.json();
 				})
 				.then((data) => {
-					console.log(data.items);
+
 					setData(data.items);
 					setIsLoading(false);
 				})

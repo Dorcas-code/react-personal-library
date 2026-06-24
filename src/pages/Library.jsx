@@ -22,7 +22,7 @@ export default function LibraryPage() {
                              width:"100%",
                              height:"100vh",
                            
-                  backgroundColor: theme === "light" ? "black" : "white"
+                  backgroundColor: "white"
                 }}>
            
         <Navigation />
@@ -30,6 +30,7 @@ export default function LibraryPage() {
                 color: theme === "light" ? "white" : "black"
                 }}>Home Page</h1>
                <SearchResults  searchBooks={(search) => setTerm(search)}/>
+                 <Library />
          </div>
         
 

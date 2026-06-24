@@ -1,33 +1,33 @@
 import React, {  useState, useEffect } from 'react';
 import { Link } from "react-router";
 import useAPI from "../hooks/useAPI";
+import { useLibrary} from "../context/LibraryContext";
 
 const Library = () => {
-	  const [books, setBooks] = useState([]);
-          const apiKey = import.meta.env.VITE_MY_API_KEY;
-          const {data,isLoading,error}=useAPI(`https://www.googleapis.com/books/v1/volumes?q=intitle:Harry-Potter&key=${apiKey}`);
-   
-   console.log("here is the data" +data);
+  const { books } = useLibrary();
+
+
    return (
 		<div className='book-list'>
 			{books.map((book) => (
 				<div
 					key={book.id}
 					className='booklist-container'>
-					<div>
+						<h2>{book.volumeInfo.title}</h2>
+					{/* <div>
 						<img
 							src={book.volumeInfo.imageLinks.smallThumbnail}
 							alt={book.volumeInfo.title}
 							style={{ width: '100%', height: '250px' }}
 						/>
-					</div>
+					</div> */}
 					<div>
 						<p className='font-bold text-center pt-5'>By: {book.volumeInfo.authors}</p>
 					</div>
 					<Link to={`/books/${book.id}`}>
 						<div className='pt-8 flex justify-center items-center'>
 							<button className='btn-readmore'>
-								Click to get the book details
+								Details
 								<svg
 									aria-hidden='true'
 									className='w-4 h-4 ml-2 -mr-1'
