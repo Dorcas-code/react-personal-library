@@ -26,10 +26,10 @@ export default function LibraryPage() {
                 }}>
            
         <Navigation />
-        <h1  style={{
+        {/* <h1  style={{
                 color: theme === "light" ? "white" : "black"
-                }}>Home Page</h1>
-               <SearchResults  searchBooks={(search) => setTerm(search)}/>
+                }}>Home Page</h1> */}
+             
                  <Library />
          </div>
         

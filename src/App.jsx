@@ -26,7 +26,7 @@ function App() {
             <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
        
       </Routes>
-  <Library/>
+
       </BrowserRouter>
         </ThemeProvider>
       </LibraryProvider>

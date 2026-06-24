@@ -9,7 +9,7 @@ const SearchResults = ({ searchBooks }) => {
     e.preventDefault();
    
     // Handle form submission here
-    handleSearch(searchTerm);
+    searchBooks(search);
   }; 
 return (
 <form className="mx-4" onSubmit={handleSubmit}>

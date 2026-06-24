@@ -3,11 +3,16 @@ import { Link } from "react-router";
 import useAPI from "../hooks/useAPI";
 import { useLibrary} from "../context/LibraryContext";
 import ListGroup from 'react-bootstrap/ListGroup';
+import SearchResults from "../components/SearchResults";
 const Library = () => {
-  const { books } = useLibrary();
+const [term, setTerm] = useState('Anything');
 
+const apiKey = import.meta.env.VITE_MY_API_KEY;
 
+const {data:books,isLoading,error}=useAPI(`https://www.googleapis.com/books/v1/volumes?q=${term}&key=${apiKey}`)
    return (
+	<>
+	  <SearchResults  searchBooks={(search) => setTerm(search)}/>
        <ListGroup variant="flush">
 		<div className='book-list'>
 			{books.map((book) => (
@@ -38,6 +43,8 @@ const Library = () => {
 			))}
 		</div>
 		</ListGroup>
+		
+		  </>
 	);
 }
 
