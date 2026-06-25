@@ -1,10 +1,11 @@
 import React, {  useState, useEffect } from 'react';
 import { Link } from "react-router";
 import useAPI from "../hooks/useAPI";
-import LocalStorage from "../hooks/LocalStorage";
 import { useLibrary} from "../context/LibraryContext";
 import ListGroup from 'react-bootstrap/ListGroup';
 import SearchResults from "../components/SearchResults";
+import FavoriteButton from "../components/FavoriteButton";
+
 const Library = () => {
 const [term, setTerm] = useState('Anything');
  
@@ -27,14 +28,15 @@ return (
 				<div
 					key={book.id}
 					className='booklist-container'>
-						<h4>{book.volumeInfo.title}</h4>
+						<h4>{book.volumeInfo.title}</h4> 
+							<FavoriteButton bookID={book.id}/>
 						
 							<p >By: {book.volumeInfo.authors} <Link to={`/book/${book.id}`}>
 
 							<button className='btn-readmore'>
 								Details
 								
-							</button>	<LocalStorage bookID={book.id}/>
+							</button>
 						
 
 					</Link>
