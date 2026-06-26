@@ -20,14 +20,14 @@ function App() {
                <ThemeProvider>
 <Router>
 
-          <Routes >
+      
           <Route  path="/" render={() => <LibraryPage />} >
        
             <Route  path="/FavoriteBookPage" render={() => <FavoriteBookPage />} />
-              <Route  path="//book/:id" render={() => <ItemDetailsPage />} />
+              <Route  path="/book/:id" render={() => <ItemDetailsPage />} />
            
            </Route>
-      </Routes>
+     
 
       </Router>
         </ThemeProvider>
