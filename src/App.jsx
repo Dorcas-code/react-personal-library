@@ -1,5 +1,5 @@
 
-import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route} from "react-router-dom";
 import LibraryPage from "./pages/Library";
 import  ItemDetailsPage from "./pages/ItemDetails";
 import FavoriteBookPage from "./pages/Favorites";
@@ -18,17 +18,26 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <HashRouter >
-      <Routes>
- 
+<Router basename="/react-personal-library">
+<Navigation></Navigation>
+    <Switch>
+        <Route path={`/FavoriteBookPage`}>
+            <FavoriteBookPage>
+                </FavoriteBookPage>
+        </Route>
+        <Route path={`/book/:id`}>
+            <ItemDetailsPage></ItemDetailsPage>
+        </Route>
+    </Switch>
+          {/* <Routes>
           <Route path="/" element={<LibraryPage />} >
        
             <Route path="/react-personal-library/FavoriteBookPage" element={<FavoriteBookPage />} />
                 <Route path='/react-personal-library/book/:id' element={<ItemDetailsPage />} />
            </Route>
-      </Routes>
+      </Routes> */}
 
-      </HashRouter>
+      </Router>
         </ThemeProvider>
       </LibraryProvider>
     </>
