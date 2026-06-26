@@ -21,7 +21,7 @@ function App() {
         <HashRouter >
       <Routes>
  
-          <Route path="/react-personal-library/" element={<LibraryPage />} />
+          <Route path="/" element={<LibraryPage />} />
        
             <Route path="/react-personal-library/FavoriteBookPage" element={<FavoriteBookPage />} />
                 <Route path='/react-personal-library/book/:id' element={<ItemDetailsPage />} />
