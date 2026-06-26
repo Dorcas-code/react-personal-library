@@ -18,9 +18,9 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-<Router >
+<Router basename="/react-personal-library">
 <Navigation></Navigation>
-    <Routes>
+    {/* <Routes>
         <Route path={`/FavoriteBookPage`}>
             <FavoriteBookPage>
                 </FavoriteBookPage>
@@ -28,14 +28,14 @@ function App() {
         <Route path={`/book/:id`}>
             <ItemDetailsPage></ItemDetailsPage>
         </Route>
-    </Routes>
-          {/* <Routes>
+    </Routes> */}
+          <Routes basename="/react-personal-library">
           <Route path="/" element={<LibraryPage />} >
        
-            <Route path="/react-personal-library/FavoriteBookPage" element={<FavoriteBookPage />} />
-                <Route path='/react-personal-library/book/:id' element={<ItemDetailsPage />} />
+            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
+                <Route path='/book/:id' element={<ItemDetailsPage />} />
            </Route>
-      </Routes> */}
+      </Routes>
 
       </Router>
         </ThemeProvider>
