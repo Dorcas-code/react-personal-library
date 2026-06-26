@@ -32,7 +32,7 @@ function App() {
 
          <Routes>
            <Route path="/" element={<LibraryPage />}>
-      <Route index element={<LibraryPage />} />
+
 
       <Route path="FavoriteBookPage" element={<FavoriteBookPage />} />
        <Route path='book/:id' element={<ItemDetailsPage />} />
