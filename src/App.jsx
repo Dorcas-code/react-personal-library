@@ -19,7 +19,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <BrowserRouter basename="/Dorcas-code/">
+        <BrowserRouter basename="/Dorcas-code">
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
