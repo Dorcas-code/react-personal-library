@@ -16,7 +16,7 @@ import Navigation from "./components/Navigation";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<LibraryPage />}>
-      <Route index element={<LibraryPage/>} />
+    
       <Route path="FavoriteBookPage" element={<FavoriteBookPage />} />
       <Route path="book/:id" element={<ItemDetailsPage />} />
     </Route>
