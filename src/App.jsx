@@ -19,7 +19,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <BrowserRouter basename="/Dorcas-code">
+        <BrowserRouter basename="/react-personal-library">
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
