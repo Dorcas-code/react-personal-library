@@ -19,7 +19,7 @@ function App() {
         <LibraryProvider>
                <ThemeProvider>
 <Router basename="/react-personal-library">
-<Navigation></Navigation>
+{/* <Navigation></Navigation> */}
     {/* <Routes>
         <Route path={`/FavoriteBookPage`}>
             <FavoriteBookPage>
@@ -29,7 +29,7 @@ function App() {
             <ItemDetailsPage></ItemDetailsPage>
         </Route>
     </Routes> */}
-          <Routes basename="/react-personal-library">
+          <Routes >
           <Route path="/" element={<LibraryPage />} >
        
             <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
