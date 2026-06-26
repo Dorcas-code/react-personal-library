@@ -18,7 +18,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-<Router basename="/react-personal-library">
+<Router >
 <Navigation></Navigation>
     <Routes>
         <Route path={`/FavoriteBookPage`}>
