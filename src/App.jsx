@@ -1,5 +1,5 @@
 
-import { HashRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import LibraryPage from "./pages/Library";
 import  ItemDetailsPage from "./pages/ItemDetails";
 import FavoriteBookPage from "./pages/Favorites";
@@ -18,24 +18,12 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-<Router basename="/react-personal-library">
-{/* <Navigation></Navigation> */}
-    {/* <Routes>
-        <Route path={`/FavoriteBookPage`}>
-            <FavoriteBookPage>
-                </FavoriteBookPage>
-        </Route>
-        <Route path={`/book/:id`}>
-            <ItemDetailsPage></ItemDetailsPage>
-        </Route>
-    </Routes> */}
-          <Routes >
-          <Route path="/" element={<LibraryPage />} >
+       <Router>
+
+          <Route exact path="/" render={() => <LibraryPage />} />
        
-            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
-                <Route path='/book/:id' element={<ItemDetailsPage />} />
-           </Route>
-      </Routes>
+            <Route exact path="/FavoriteBookPage" render={() => <FavoriteBookPage />} />
+              <Route exact path="/book/:id" render={() => <ItemDetailsPage />} />
 
       </Router>
         </ThemeProvider>
