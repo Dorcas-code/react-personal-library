@@ -6,6 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ThemeToggleButton from './ThemeToggleButton';
 
@@ -20,8 +21,8 @@ export default function Navigation() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             
-            <Nav.Link  variant="primary" href="/" style={{ color: '#000000'}} >Home</Nav.Link>
-            <Nav.Link  variant="primary" href="/FavoriteBookPage">My Favorite Books</Nav.Link>
+            <Nav.Link  as={Link} variant="primary" to="/" style={{ color: '#000000'}} >Home</Nav.Link>
+            <Nav.Link  as={Link}  variant="primary" to="/FavoriteBookPage">My Favorite Books</Nav.Link>
 
           </Nav>
        

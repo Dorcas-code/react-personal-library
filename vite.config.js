@@ -5,6 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
     base: '/react-personal-library', 
   plugins: [react(),
-    ghPages(),
+   
     tailwindcss(),],
 })
