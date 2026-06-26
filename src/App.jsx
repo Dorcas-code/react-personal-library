@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import LibraryPage from "./pages/Library";
 import  ItemDetailsPage from "./pages/ItemDetails";
 import FavoriteBookPage from "./pages/Favorites";
@@ -13,12 +13,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navigation from "./components/Navigation";
 
-function App() {
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<LibraryPage />}>
+      <Route index element={<LibraryPage/>} />
+      <Route path="FavoriteBookPage" element={<FavoriteBookPage />} />
+      <Route path="book/:id" element={<ItemDetailsPage />} />
+    </Route>
+  )
+)
+function App({routes}) {
   return (
     <>
         <LibraryProvider>
                <ThemeProvider>
-<Router>
+{/* <Router>
 
       
           <Route  path="/" render={() => <LibraryPage />} >
@@ -29,7 +38,7 @@ function App() {
            </Route>
      
 
-      </Router>
+      </Router> */}
         </ThemeProvider>
       </LibraryProvider>
     </>
