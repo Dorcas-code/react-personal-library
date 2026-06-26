@@ -34,7 +34,7 @@ function App() {
          <HashRouter>
         <LibraryProvider>
                <ThemeProvider>
-                    <RouterProvider router={router} />
+                
 
 {/* <Router basename="/react-personal-library"> */}
 {/* <Navigation></Navigation> */}
