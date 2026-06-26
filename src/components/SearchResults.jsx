@@ -12,7 +12,7 @@ const SearchResults = ({ searchBooks }) => {
     searchBooks(search);
   }; 
 return (
-<form className="mx-4" onSubmit={handleSubmit}>
+<form className="mx-5 my-5" onSubmit={handleSubmit}>
      <InputGroup  >
         <Form.Control 
           placeholder="Discover your next read "

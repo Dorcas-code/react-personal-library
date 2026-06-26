@@ -14,11 +14,6 @@ export const LibraryProvider = ({ children }) => {
     localStorage.setItem('sharedData', newValue);
   };
 
-
-
-
-  
-
   return (
     <LibraryContext.Provider value={{value, updateValue}}>
         {children}
