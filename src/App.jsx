@@ -1,5 +1,6 @@
 
 import {BrowserRouter,  Route, Routes } from "react-router";
+
 import LibraryPage from "./pages/Library";
 import  ItemDetailsPage from "./pages/ItemDetails";
 import FavoriteBookPage from "./pages/Favorites";
@@ -18,7 +19,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <BrowserRouter basename="/dorcas-code.github.io">
+        <BrowserRouter basename="/Dorcas-code/">
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
