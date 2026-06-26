@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-        
+         <BrowserRouter>
         <LibraryProvider>
                <ThemeProvider>
 
@@ -42,7 +42,7 @@ function App() {
 
         </ThemeProvider>
       </LibraryProvider>
-
+</BrowserRouter>  
     </>
   );
 }
