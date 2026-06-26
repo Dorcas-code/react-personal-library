@@ -18,12 +18,16 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-       <Router>
+<Router>
 
-          <Route exact path="/" render={() => <LibraryPage />} />
+          <Routes >
+          <Route exact path="/" render={() => <LibraryPage />} >
        
             <Route exact path="/FavoriteBookPage" render={() => <FavoriteBookPage />} />
-              <Route exact path="/book/:id" render={() => <ItemDetailsPage />} />
+              <Route exact path="//book/:id" render={() => <ItemDetailsPage />} />
+           
+           </Route>
+      </Routes>
 
       </Router>
         </ThemeProvider>
