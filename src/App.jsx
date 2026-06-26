@@ -1,7 +1,7 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
+import { HashRouter as Router, Routes, Route} from "react-router-dom";
 import LibraryPage from "./pages/Library";
-import ItemDetailsPage from "./pages/ItemDetails";
+import  ItemDetailsPage from "./pages/ItemDetails";
 import FavoriteBookPage from "./pages/Favorites";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import { LibraryProvider, useLibrary } from "./context/LibraryContext";
@@ -12,37 +12,34 @@ import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navigation from "./components/Navigation";
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-    // <Route path="/" element={<LibraryPage />}>
-    //   <Route index element={<LibraryPage />} />
 
-    //   <Route path="FavoriteBookPage" element={<FavoriteBookPage />} />
-    //    <Route path='book/:id' element={<ItemDetailsPage />} />
-    // </Route>
-//   )
-// )
 function App() {
-
   return (
     <>
-         <BrowserRouter>
         <LibraryProvider>
                <ThemeProvider>
+<Router basename="/react-personal-library">
+{/* <Navigation></Navigation> */}
+    {/* <Routes>
+        <Route path={`/FavoriteBookPage`}>
+            <FavoriteBookPage>
+                </FavoriteBookPage>
+        </Route>
+        <Route path={`/book/:id`}>
+            <ItemDetailsPage></ItemDetailsPage>
+        </Route>
+    </Routes> */}
+          <Routes >
+          <Route path="/" element={<LibraryPage />} >
+       
+            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
+                <Route path='/book/:id' element={<ItemDetailsPage />} />
+           </Route>
+      </Routes>
 
-         <Routes>
-           <Route path="/" element={<LibraryPage />}>
-
-
-      <Route path="FavoriteBookPage" element={<FavoriteBookPage />} />
-       <Route path='book/:id' element={<ItemDetailsPage />} />
-    </Route>
-        </Routes>
-
-
+      </Router>
         </ThemeProvider>
       </LibraryProvider>
-</BrowserRouter>  
     </>
   );
 }
