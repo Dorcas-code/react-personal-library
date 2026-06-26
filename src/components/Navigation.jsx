@@ -20,8 +20,8 @@ export default function Navigation() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             
-            <Nav.Link  variant="primary" href="/" style={{ color: '#000000'}} >Home</Nav.Link>
-            <Nav.Link  variant="primary" href="/FavoriteBookPage">My Favorite Books</Nav.Link>
+            <Nav.Link  variant="primary" href="/react-personal-library/" style={{ color: '#000000'}} >Home</Nav.Link>
+            <Nav.Link  variant="primary" href="/react-personal-library/FavoriteBookPage">My Favorite Books</Nav.Link>
 
           </Nav>
        
