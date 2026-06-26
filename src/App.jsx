@@ -1,5 +1,5 @@
 
-import { HashRouter as Router, Routes, Route} from "react-router-dom";
+import { HashRouter, Route, Routes, Link } from "react-router-dom";
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import LibraryPage from "./pages/Library";
 import  ItemDetailsPage from "./pages/ItemDetails";
@@ -15,22 +15,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from "./components/Navigation";
 
 function App() {
-  const router = createHashRouter([
-  {
-    path: '/#',
-    element: <LibraryPage />,
-  },
-  {
-    path: '/#/FavoriteBookPage',
-    element: <FavoriteBookPage />,
-  },
-    {
-    path: '/#/book/:id',
-    element: <ItemDetailsPage  />,
-  },
-]);
+//   const router = createHashRouter([
+//   {
+//     path: '/#',
+//     element: <LibraryPage />,
+//   },
+//   {
+//     path: '/#/FavoriteBookPage',
+//     element: <FavoriteBookPage />,
+//   },
+//     {
+//     path: '/#/book/:id',
+//     element: <ItemDetailsPage  />,
+//   },
+// ]);
   return (
     <>
+         <HashRouter>
         <LibraryProvider>
                <ThemeProvider>
                     <RouterProvider router={router} />
@@ -46,17 +47,18 @@ function App() {
             <ItemDetailsPage></ItemDetailsPage>
         </Route>
     </Routes> */}
-          {/* <Routes >
+          <Routes >
           <Route path="/" element={<LibraryPage />} >
        
             <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
                 <Route path='/book/:id' element={<ItemDetailsPage />} />
            </Route>
-      </Routes> */}
+      </Routes>
 
       {/* </Router> */}
         </ThemeProvider>
       </LibraryProvider>
+      </HashRouter>
     </>
   );
 }
