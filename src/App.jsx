@@ -18,7 +18,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/dorcas-code">
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
