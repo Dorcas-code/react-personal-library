@@ -48,10 +48,10 @@ function App() {
         </Route>
     </Routes> */}
           <Routes >
-          <Route path="/" element={<LibraryPage />} >
+          <Route path="/#" element={<LibraryPage />} >
        
-            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
-                <Route path='/book/:id' element={<ItemDetailsPage />} />
+            <Route path="/#/FavoriteBookPage" element={<FavoriteBookPage />} />
+                <Route path='/#/book/:id' element={<ItemDetailsPage />} />
            </Route>
       </Routes>
 
