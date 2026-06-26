@@ -27,6 +27,7 @@ function App({routes}) {
     <>
         <LibraryProvider>
                <ThemeProvider>
+                <RouterProvider router={router}/>
 {/* <Router>
 
       
