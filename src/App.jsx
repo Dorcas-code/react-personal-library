@@ -19,7 +19,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <BrowserRouter basename="/react-personal-library">
+        <BrowserRouter>
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
