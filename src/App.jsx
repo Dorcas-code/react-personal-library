@@ -1,6 +1,6 @@
 
 import {BrowserRouter,  Route, Routes } from "react-router";
-
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import LibraryPage from "./pages/Library";
 import  ItemDetailsPage from "./pages/ItemDetails";
 import FavoriteBookPage from "./pages/Favorites";
@@ -19,7 +19,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <BrowserRouter basename="/react-personal-library">
+        <HashRouter>
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
@@ -28,7 +28,7 @@ function App() {
                 <Route path='/book/:id' element={<ItemDetailsPage />} />
       </Routes>
 
-      </BrowserRouter>
+      </HashRouter>
         </ThemeProvider>
       </LibraryProvider>
     </>
