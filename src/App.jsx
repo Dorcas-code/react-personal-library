@@ -26,15 +26,16 @@ function App() {
 
   return (
     <>
-        
+           <RouterProvider router={router}>
         <LibraryProvider>
                <ThemeProvider>
 
-          <RouterProvider router={router}/>
+        
 
 
         </ThemeProvider>
       </LibraryProvider>
+      </RouterProvider>
 
     </>
   );
