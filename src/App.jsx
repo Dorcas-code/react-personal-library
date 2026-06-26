@@ -21,10 +21,10 @@ function App() {
 <Router>
 
           <Routes >
-          <Route exact path="/" render={() => <LibraryPage />} >
+          <Route  path="/" render={() => <LibraryPage />} >
        
-            <Route exact path="/FavoriteBookPage" render={() => <FavoriteBookPage />} />
-              <Route exact path="//book/:id" render={() => <ItemDetailsPage />} />
+            <Route  path="/FavoriteBookPage" render={() => <FavoriteBookPage />} />
+              <Route  path="//book/:id" render={() => <ItemDetailsPage />} />
            
            </Route>
       </Routes>
