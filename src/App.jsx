@@ -18,7 +18,7 @@ function App() {
 
         <LibraryProvider>
                <ThemeProvider>
-<HashRouter basename="/">
+<HashRouter>
       <Routes>
  
           <Route path="/" element={<LibraryPage />} >
