@@ -18,7 +18,7 @@ function App() {
 
         <LibraryProvider>
                <ThemeProvider>
- <HashRouter basename={import.meta.env.BASE_URL}>
+ <HashRouter>
       <Routes>
  
           <Route path="/" element={<LibraryPage />} >
