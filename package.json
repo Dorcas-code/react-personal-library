@@ -1,9 +1,9 @@
 {
   "name": "majorproject3-optiona",
+  "homepage": "https://dorcas-code.github.io/react-personal-library/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dorcas-code.github.io/react-personal-library/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
