@@ -13,7 +13,7 @@ const [term, setTerm] = useState('Anything');
 
 
 const apiKey = import.meta.env.VITE_MY_API_KEY;
-
+console.log(apiKey);
 const {data:books,isLoading,error}=useAPI(`https://www.googleapis.com/books/v1/volumes?q=${term}&key=${apiKey}`)
  
 return (
