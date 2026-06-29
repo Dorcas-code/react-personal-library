@@ -27,10 +27,7 @@ export default function LibraryPage() {
                 }}>
            
         <Navigation />
-        {/* <h1  style={{
-                color: theme === "light" ? "white" : "black"
-                }}>Home Page</h1> */}
-             
+
                  <Library />
          </div>
         
