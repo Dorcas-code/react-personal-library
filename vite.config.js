@@ -4,10 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
- base: "/react-personal-library",
-  plugins: [
-    react(),
-
-  ],
-  
+    base: '/dorcas-code.github.io/', 
+  plugins: [react(),
+    tailwindcss(),],
 })

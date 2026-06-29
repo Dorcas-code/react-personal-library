@@ -16,16 +16,17 @@ function App() {
   return (
     <>
         <LibraryProvider>
-          <ThemeProvider>
-              <BrowserRouter basename={import.meta.env.BASE_URL} >
-               <Routes>
-                <Route index element={<Home />} >
-                    
-                <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
-                 <Route path="/book/:id" element={ <ItemDetailsPage />} />
-                 </Route>
-               </Routes>
-            </BrowserRouter>
+               <ThemeProvider>
+        <BrowserRouter basename="/dorcas-code.github.io">
+      <Routes>
+ 
+          <Route path="/" element={<LibraryPage />} />
+       
+            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
+                <Route path='/book/:id' element={<ItemDetailsPage />} />
+      </Routes>
+
+      </BrowserRouter>
         </ThemeProvider>
       </LibraryProvider>
     </>
