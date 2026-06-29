@@ -17,13 +17,14 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <HashRouter >
+        <HashRouter basename={import.meta.env.BASE_URL}>
       <Routes>
  
-          <Route path="/" element={<LibraryPage />} />
+          <Route path="/" element={<LibraryPage />} >
        
             <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
                 <Route path='/book/:id' element={<ItemDetailsPage />} />
+          </Route>
       </Routes>
 
       </HashRouter>
