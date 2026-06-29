@@ -20,8 +20,9 @@ export default function FavoriteBookPage() {
  const emptyString = "<h4><b>No favorite books yet</b>, please click heart to add favorite books</h4>";
 
 //need to parse the value!
-const apiKey = "AIzaSyBhmvH2uzrHKWO9jfqdcVashTeEqmd1aWQ";
+
         useEffect(() => {
+			const apiKey = "AIzaSyBhmvH2uzrHKWO9jfqdcVashTeEqmd1aWQ";
        ids.map((id) => {
           fetch(`https://www.googleapis.com/books/v1/volumes?q=${id}&key=${apiKey}`)
             .then((res) => {

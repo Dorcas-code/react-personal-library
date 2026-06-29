@@ -23,8 +23,8 @@ function App() {
  
           <Route path="/" element={<LibraryPage />} />
        
-            <Route path="/#/FavoriteBookPage" element={<FavoriteBookPage />} />
-                <Route path='/#/book/:id' element={<ItemDetailsPage />} />
+            <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
+                <Route path='/book/:id' element={<ItemDetailsPage />} />
          
       </Routes>
 </HashRouter>

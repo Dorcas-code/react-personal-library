@@ -6,9 +6,12 @@ import { useParams } from "react-router";
 
 export default function ItemDetailsPage() {
 	const [books, setBooks] = useState([]);
-	const { id } = useParams();
-     const apiKey = "AIzaSyBhmvH2uzrHKWO9jfqdcVashTeEqmd1aWQ";
+
+  
         useEffect(() => {
+				const { id } = useParams();
+  
+			   const apiKey = "AIzaSyBhmvH2uzrHKWO9jfqdcVashTeEqmd1aWQ";
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${id}&key=${apiKey}`)
             .then((res) => {
             return res.json();
