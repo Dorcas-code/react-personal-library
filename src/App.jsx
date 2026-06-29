@@ -17,7 +17,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <BrowserRouter basename="/react-personal-library/">
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
