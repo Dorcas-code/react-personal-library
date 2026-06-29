@@ -1,5 +1,4 @@
-
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import LibraryPage from "./pages/Library";
 import  ItemDetailsPage from "./pages/ItemDetails";
 import FavoriteBookPage from "./pages/Favorites";
@@ -13,33 +12,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navigation from "./components/Navigation";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<LibraryPage />}>
-    
-      <Route path="FavoriteBookPage" element={<FavoriteBookPage />} />
-      <Route path="book/:id" element={<ItemDetailsPage />} />
-    </Route>
-  )
-)
-function App({routes}) {
+function App() {
   return (
     <>
         <LibraryProvider>
                <ThemeProvider>
-                <RouterProvider router={router}/>
-{/* <Router>
 
-      
-          <Route  path="/" render={() => <LibraryPage />} >
-       
-            <Route  path="/FavoriteBookPage" render={() => <FavoriteBookPage />} />
-              <Route  path="/book/:id" render={() => <ItemDetailsPage />} />
-           
-           </Route>
-     
 
-      </Router> */}
+              <BrowserRouter basename={import.meta.env.BASE_URL} >
+            <Routes>
+                <Route index element={<Home />} />
+                <Route path="/FavoriteBookPage" element={<FavoriteBookPage />} />
+                      <Route path="/book/:id" element={ <ItemDetailsPage />} />
+            </Routes>
+        </BrowserRouter>
         </ThemeProvider>
       </LibraryProvider>
     </>
