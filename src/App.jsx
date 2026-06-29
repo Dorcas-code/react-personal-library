@@ -17,7 +17,7 @@ function App() {
     <>
         <LibraryProvider>
                <ThemeProvider>
-        <HashRouter basename="/react-personal-library/">
+        <HashRouter >
       <Routes>
  
           <Route path="/" element={<LibraryPage />} />
