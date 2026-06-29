@@ -15,7 +15,7 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <>
-            <HashRouter basename={import.meta.env.BASE_URL}>
+            <HashRouter >
         <LibraryProvider>
                <ThemeProvider>
 
