@@ -15,10 +15,10 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <>
-            <HashRouter basename='/react-personal-library/'>
+
         <LibraryProvider>
                <ThemeProvider>
-
+            <HashRouter basename={import.meta.env.BASE_URL}>
       <Routes>
  
           <Route path="/" element={<LibraryPage />} >
@@ -27,11 +27,11 @@ function App() {
                 <Route path='/book/:id' element={<ItemDetailsPage />} />
           </Route>
       </Routes>
-
+</HashRouter>
   
         </ThemeProvider>
       </LibraryProvider>
-          </HashRouter>
+
     </>
   );
 }
