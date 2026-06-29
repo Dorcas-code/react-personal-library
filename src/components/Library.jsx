@@ -31,7 +31,7 @@ return (
 						<h4>{book.volumeInfo.title}</h4> 
 							<FavoriteButton bookID={book.id}/>
 						
-							<p >By: {book.volumeInfo.authors} <Link to={`/#/book/${book.id}`}>
+							<p >By: {book.volumeInfo.authors} <Link to={`/book/${book.id}`}>
 
 							<button className='btn-readmore'>
 								Details
