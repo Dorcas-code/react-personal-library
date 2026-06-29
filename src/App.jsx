@@ -21,11 +21,11 @@ function App() {
 <HashRouter>
       <Routes>
  
-          <Route path="/" element={<LibraryPage />} >
+          <Route path="/" element={<LibraryPage />} />
        
             <Route path="/#/FavoriteBookPage" element={<FavoriteBookPage />} />
                 <Route path='/#/book/:id' element={<ItemDetailsPage />} />
-          </Route>
+         
       </Routes>
 </HashRouter>
   
