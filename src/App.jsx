@@ -15,7 +15,7 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <>
-            <HashRouter >
+            <HashRouter basename='/react-personal-library/'>
         <LibraryProvider>
                <ThemeProvider>
 
