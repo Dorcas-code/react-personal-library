@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {  HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
