@@ -11,17 +11,15 @@ import useAPI from "../hooks/useAPI";
 
 
 export default function FavoriteBookPage() {
-  const [books, setBooks] = useState([]);
+  const [favbooks, setFavBooks] = useState([]);
   const [ datas, setDatas] = useState([]);
   const { theme, toggleTheme } = useTheme();
   const { value} =  useLibrary();
   const ids= JSON.parse(value);
   const checkEmpty = ids.length? true: false;
- const emptyString = "<h4><b>No favorite books yet</b>, please click heart to add favorite books</h4>";
+ 	const emptyString = "<h4><b>No favorite books yet</b>, please click heart to add favorite books</h4>";
+	const apiKey = import.meta.env.VITE_MY_API_KEY;
 
-//need to parse the value!
-const apiKey = import.meta.env.VITE_MY_API_KEY;
-console.log(apiKey);
         useEffect(() => {
 			
        ids.map((id) => {
@@ -30,7 +28,7 @@ console.log(apiKey);
             return res.json();
             })
             .then((data) => {
-                setBooks(data.items);
+                setFavBooks(data.items);
         
             })
         })
@@ -44,7 +42,7 @@ console.log(apiKey);
             <h1>My favorite books</h1>
         <ListGroup variant="flush">
 		<div className='book-list'>
-			{!checkEmpty ? <p><b>No favorite books yet</b>, please click heart to add favorite books</p> : books.map((book) => (
+			{!checkEmpty ? <p><b>No favorite books yet</b>, please click heart to add favorite books</p> : favbooks.map((book) => (
 			
 				<ListGroup.Item as="li" key={book.id}>
 				
@@ -54,7 +52,8 @@ console.log(apiKey);
 						<h4>{book.volumeInfo.title}</h4> 
 					
 						
-							<p >By: {book.volumeInfo.authors} <Link to={`/book/${book.id}`}>
+							<p >By: {book.volumeInfo.authors} 
+								<Link to={`/book/${book.id}`}>
 
 							<button className='btn-readmore'>
 								Details
