@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from "../components/Navigation";
-import { useParams } from "react-router";
+import { useParams } from 'react-router-dom';
 
 
 
